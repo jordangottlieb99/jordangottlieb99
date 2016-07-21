@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles.css">
+<script>
+function functionLink4(){
+	var link = document.getElementById("py")
+	link.style.color = "HotPink";
+}
+
+function functionLinkOut4(){
+var link = document.getElementById("py")
+	link.style.color = "black";
+}
+function functionChangeImage1() {
+	var link = document.getElementById("click")
+		link.style.color = "black";
+	var picture = document.getElementById("image1");
+	if (picture.src.match("scene2.jpg")){
+		picture.src = "scene3.jpg";
+	}
+	else if (picture.src.match("scene3.jpg")){
+		picture.src = "scene1.jpg";
+	}
+	else {
+		picture.src = "scene2.jpg";
+	}
+}
+function functionBigImage() {
+	var size = document.getElementById("image1")
+	size.width = "650"
+	size.height = "433"
+	}
+function functionSmallImage() {
+	var size = document.getElementById("image1")
+	size.width = "600"
+	size.height = "400"
+	}
+</script>
+	<header>
+		<title>
+			Scene
+		</title>
+		<p>
+			Scene
+		</p>
+			
+	</header>
+	<body>
+	<br/>
+	<center>
+	<p id = "caption">
+	The following pictures are screenshots from a scene created using the Turtle module of Python. 
+	The turtle feature is used to draw and fill in all of the shapes in the program.
+	<span id = "click"> Click on the image </span> to view different screenshots of the scene.
+	</p>
+		<img src="scene1.jpg" width="600" height="350" id="image1"onclick = "functionChangeImage1()" onmouseover = "functionBigImage()" onmouseout = "functionSmallImage()">
+		<br/>
+		<a href="file:///C:/Users/GWC/Desktop/JORDANWEBPAGES/scene_turtle.html"  id = "py" onmouseover = "functionLink4()" onmouseout = "functionLinkOut4()">Click here to view the python code.</a>
+		</center>
+</html>

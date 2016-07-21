@@ -1,0 +1,56 @@
+header {
+	color:HotPink;
+	text-align:center;
+	font-size:72px;
+	font-style:bold;
+	background-color:black
+
+}
+
+html {
+	background-color: AntiqueWhite;
+	font-family: Impact, Charcoal, sans-serif	
+}
+
+nav{    
+  width: 150px;
+  float: left;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+  text-align:center;
+}
+
+#tabletitle{
+	text-align:center;
+	font-size:30px;
+	color:HotPink;
+}
+
+table{
+	font-size:20px;
+}
+
+#image{
+	transform: rotate(180deg);
+
+}
+
+a{
+	text-decoration: none;
+	color:black;
+}
+ 
+ #caption{
+	 text-align:center;
+	 width:600px;
+ }
+ 
+ p > span{
+	 color:HotPink;
+ }
+ 
+ #image1 {
+	 border-color:AntiqueWhite;
+ }
