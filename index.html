@@ -33,11 +33,11 @@ function addClub() {
     //check to ensure the mydb object has been created
     if (mydb) {
         //get the values of the name, email, club, purpose text inputs
-        var firstname = document.GetElementById("fname").value; //box itself is id = fname value is whats inside of the box
-		var lastname = document.GetElementById("lname").value; //same as before, box itself is id value is whats typed
-		var email = document.GetElementById("email").value; // email input
-		var clubname = document.GetElementById("cname").value; // club name value input
-		var purpose = document.GetElementById("purpose").value; 
+        var firstname = document.getElementById("fname").value; //box itself is id = fname value is whats inside of the box
+		var lastname = document.getElementById("lname").value; //same as before, box itself is id value is whats typed
+		var email = document.getElementById("email").value; // email input
+		var clubname = document.getElementById("cname").value; // club name value input
+		var purpose = document.getElementById("purpose").value; 
 
         //Test to ensure that the user has entered all fields
         if (firstname !== "" && lastname !== "" && email !=="" && clubname !== "" && purpose !== "") {
