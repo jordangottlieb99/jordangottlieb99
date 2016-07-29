@@ -10,11 +10,11 @@ if (window.openDatabase) {
 //2.version number
 //	3. a description 
 //4. the size of the database (in bytes) 1024 x 1024 = 1MB
-    var mydb = openDatabase("cars_db", "0.1", "A Database of Cars I Like", 1024 * 1024);
+    var mydb = openDatabase("clubs_db", "0.1", "Database of Clubs Registered", 1024 * 1024);
 
     //create the cars table using SQL for the database using a transaction MUST BE IN A TRANSACTION
     mydb.transaction(function(t) {
-        t.executeSql("CREATE TABLE IF NOT EXISTS cars (id INTEGER PRIMARY KEY ASC, make TEXT, model TEXT)"); //creates table 
+        t.executeSql("CREATE TABLE IF NOT EXISTS clubs (email TEXT PRIMARY KEY ASC, firstname TEXT, lastname TEXT, clubname TEXT, purpose TEXT)"); //creates table 
 		//first column is "row": this is an integer, a PK, and is in asc order
 		//second column is "make": of type "text"
 		//third column is "model": of type "text"
@@ -143,3 +143,4 @@ label {
 </body>
 
 </html>
+
