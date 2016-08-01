@@ -12,7 +12,7 @@ if (window.openDatabase) {
     var mydb = openDatabase("clubs_db", "0.1", "Database of Clubs Registered", 1024 * 1024);
     //create the clubs table using SQL for the database using a transaction MUST BE IN A TRANSACTION
     mydb.transaction(function(t) {
-        t.executeSql("CREATE TABLE IF NOT EXISTS clubs2 (email TEXT PRIMARY KEY, firstname TEXT, lastname TEXT, clubname TEXT, purpose TEXT, category INTEGER)"); //creates table 
+        t.executeSql("CREATE TABLE IF NOT EXISTS clubs2 (email TEXT PRIMARY KEY, firstname TEXT, lastname TEXT, clubname TEXT, purpose TEXT, events TEXT, fundraisers TEXT, category INTEGER, image TEXT)"); //creates table 
 		//first column is "email": this is an integer, a PK and is in asc order
 		//second column is "firstname": of type "text"
 		//third column is "lastname": of type "text"
@@ -33,11 +33,14 @@ function addClub() {
 		var clubname = document.getElementById("cname").value; // club name value input
 		var purpose = document.getElementById("purpose").value; 
 		var category = document.getElementById("category").value; //gets value of the category
+		var events = document.getElementById("events").value; // club name value input
+		var fundraisers = document.getElementById("fundraisers").value; 
+		var image = document.getElementById("image").value; //gets value of the category
         //Test to ensure that the user has entered all fields
         if (firstname !== "" && lastname !== "" && email !=="" && clubname !== "" && purpose !== "") {
             //Insert the user entered details into the clubs table, note the use of the ? placeholder, these will replaced by the data passed in as an array as the second parameter
             mydb.transaction(function(t) {
-				t.executeSql("INSERT INTO clubs2 (email, firstname, lastname, clubname, purpose, category) VALUES (?, ?, ?, ?, ?, ?)", [email, firstname, lastname, clubname, purpose, category]); 
+				t.executeSql("INSERT INTO clubs2 (email, firstname, lastname, clubname, purpose, events, fundraisers, category, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [email, firstname, lastname, clubname, purpose, events, fundraisers, category, image]); 
 				//window.open("http://www.w3schools.com");
             });
         } else {
@@ -78,7 +81,15 @@ body {
     <label>
         <h3>Club Purpose</h3>
     </label>    
-    <input type="text" id = "purpose" required autocomplete="off" required />
+    <input type="text" size="5" id = "purpose" required autocomplete="off" required />
+    <label>
+    	<h3>Events</h3>
+    </label>    
+    <input type="text" size="5" id = "events" required autocomplete="off" required />
+    <label>
+        <h3>Fundraisers</h3>
+    </label>    
+    <input type="text" size="5" id = "fundraisers" required autocomplete="off" required />
     <label>
         <h3>Club Category</h3>
     </label>
@@ -88,7 +99,8 @@ body {
   <option value=3>Student Government</option>
   <option value=4>Academic</option>
    <option value=5>Hobby</option>
-  <option value=6>Other</option>
+   <option value=6>Social Awareness</option>
+  <option value=7>Other</option>
 </select>
 
     <br>
@@ -96,7 +108,7 @@ body {
      <label>
         <h3>Image</h3>
     </label>
-    <input type="file" name="pic" multiple accept="image/gif, image/jpeg" />
+    <input type="file" id="image" name="pic" multiple accept="image/gif, image/jpeg" />
     <br>
     <br>
     <input type="button" id = "addclub" onclick = "addClub()" value="Submit"> 
