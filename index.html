@@ -47,7 +47,14 @@ function addClub() {
         alert("db not found, your browser does not support web sql!");
     }
 }
-//function to remove a car from the database, passed the row id as it's only parameter
+
+function deleteTable() {
+db.transaction(function (tx) {
+  tx.executeSql('DROP TABLE mytable');
+});
+}
+
+
 </script>
 
 <title>Create a Club</title>
@@ -101,6 +108,7 @@ body {
     <br>
     <br>
     <input type="button" id = "addclub" onclick = "addClub()" value="Submit"> 
+    <input type="button" id = "deletetab;e" onclick = "deleteTable()" value="Submit"> 
 
 </form>
 </body>
