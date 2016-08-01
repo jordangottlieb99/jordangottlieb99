@@ -47,14 +47,6 @@ function addClub() {
         alert("db not found, your browser does not support web sql!");
     }
 }
-
-function deleteTable() {
-db.transaction(function (tx) {
-  tx.executeSql('DROP TABLE clubs');
-});
-}
-
-
 </script>
 
 <title>Create a Club</title>
@@ -108,7 +100,6 @@ body {
     <br>
     <br>
     <input type="button" id = "addclub" onclick = "addClub()" value="Submit"> 
-    <input type="button" id = "deletetable" onclick = "deleteTable()" value="Delete"> 
 
 </form>
 </body>
