@@ -34,7 +34,7 @@ function addClub() {
 		var purpose = document.getElementById("purpose").value; 
 		var category = document.getElementsByClassName("category").value; //gets value of the category
         //Test to ensure that the user has entered all fields
-        if (firstname !== "" && lastname !== "" && email !=="" && clubname !== "" && purpose !== "") {
+        if (firstname !== "" && lastname !== "" && email !=="" && clubname !== "" && purpose !== "" && category !=="") {
             //Insert the user entered details into the clubs table, note the use of the ? placeholder, these will replaced by the data passed in as an array as the second parameter
             mydb.transaction(function(t) {
 				t.executeSql("INSERT INTO clubs (email, firstname, lastname, clubname, purpose, category) VALUES (?, ?, ?, ?, ?, ?)", [email, firstname, lastname, clubname, purpose, category]); 
