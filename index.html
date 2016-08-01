@@ -52,17 +52,17 @@ function addUser() {
             <form action="/" method="post">       
             <div class="top-row">
                 <div class="field-wrap">
-                    <input type="text" required autocomplete="off" placeholder="First Name" required />
+                    <input type="text" required autocomplete="off" id="fname" placeholder="First Name" required />
                 </div>
                 <div class="field-wrap">
-                    <input type="text"required autocomplete="off" placeholder="Last Name" required/>
+                    <input type="text"required autocomplete="off" id="lname" placeholder="Last Name" required/>
                 </div>
             </div>
             <div class="field-wrap">
-                <input type="email"required autocomplete="off" placeholder="Email Address" required/>
+                <input type="email"required autocomplete="off" id="email" placeholder="Email Address" required/>
             </div>
             <div class="field-wrap">
-                <input type="password"required autocomplete="off" placeholder="Password" required/>
+                <input type="password"required autocomplete="off" id="password" placeholder="Password" required/>
             </div>
             <br>
             <button type="button" onclick="addUser()" class="button button-block"/>Get Started</button>
