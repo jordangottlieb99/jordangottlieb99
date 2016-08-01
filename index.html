@@ -18,7 +18,7 @@ if (window.openDatabase) {
     alert("WebSQL is not supported by your browser!"); //will run this is webSQL is not supported by browser
 }
 //function to add the club to the database
-function addClub() {
+function addUser() {
     //check to ensure the mydb object has been created
     if (mydb) {
         //get the values of the name, email, club, purpose text inputs
@@ -65,7 +65,7 @@ function addClub() {
                 <input type="password"required autocomplete="off" placeholder="Password" required/>
             </div>
             <br>
-            <button type="submit" class="button button-block"/>Get Started</button>
+            <button type="submit" onclick="addUser()" class="button button-block"/>Get Started</button>
             Already have an account? <a href="CoverPage.html">Log in.</a></li>
             </form>
         </div>
