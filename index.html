@@ -50,7 +50,7 @@ function addClub() {
 
 function deleteTable() {
 db.transaction(function (tx) {
-  tx.executeSql('DROP TABLE mytable');
+  tx.executeSql('DROP TABLE clubs');
 });
 }
 
@@ -108,7 +108,7 @@ body {
     <br>
     <br>
     <input type="button" id = "addclub" onclick = "addClub()" value="Submit"> 
-    <input type="button" id = "deletetab;e" onclick = "deleteTable()" value="Submit"> 
+    <input type="button" id = "deletetable" onclick = "deleteTable()" value="Delete"> 
 
 </form>
 </body>
