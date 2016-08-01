@@ -12,7 +12,7 @@ if (window.openDatabase) {
     var mydb = openDatabase("clubs_db", "0.1", "Database of Clubs Registered", 1024 * 1024);
     //create the clubs table using SQL for the database using a transaction MUST BE IN A TRANSACTION
     mydb.transaction(function(t) {
-        t.executeSql("CREATE TABLE IF NOT EXISTS clubs3 (email TEXT PRIMARY KEY, firstname TEXT, lastname TEXT, clubname TEXT, purpose TEXT, events TEXT, fundraisers TEXT, category INTEGER, image TEXT)"); //creates table 
+        t.executeSql("CREATE TABLE IF NOT EXISTS clubs2 (email TEXT PRIMARY KEY, firstname TEXT, lastname TEXT, clubname TEXT, purpose TEXT, events TEXT, fundraisers TEXT, category INTEGER, image TEXT)"); //creates table 
 		//first column is "email": this is an integer, a PK and is in asc order
 		//second column is "firstname": of type "text"
 		//third column is "lastname": of type "text"
@@ -40,7 +40,7 @@ function addClub() {
         if (firstname !== "" && lastname !== "" && email !=="" && clubname !== "" && purpose !== "") {
             //Insert the user entered details into the clubs table, note the use of the ? placeholder, these will replaced by the data passed in as an array as the second parameter
             mydb.transaction(function(t) {
-				t.executeSql("INSERT INTO clubs3 (email, firstname, lastname, clubname, purpose, events, fundraisers, category, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [email, firstname, lastname, clubname, purpose, events, fundraisers, category, image]); 
+				t.executeSql("INSERT INTO clubs2 (email, firstname, lastname, clubname, purpose, events, fundraisers, category, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [email, firstname, lastname, clubname, purpose, events, fundraisers, category, image]); 
 				//window.open("http://www.w3schools.com");
             });
         } else {
@@ -81,15 +81,15 @@ body {
     <label>
         <h3>Club Purpose</h3>
     </label>    
-    <input type="text" size="5" id = "purpose" required autocomplete="off" required />
+    <input type="text" height="500" id = "purpose" required autocomplete="off" required />
     <label>
     	<h3>Events</h3>
     </label>    
-    <input type="text" size="5" id = "events" required autocomplete="off" required />
+    <input type="text" height="500" id = "events" required autocomplete="off" required />
     <label>
         <h3>Fundraisers</h3>
     </label>    
-    <input type="text" size="5" id = "fundraisers" required autocomplete="off" required />
+    <input type="text" height="500" id = "fundraisers" required autocomplete="off" required />
     <label>
         <h3>Club Category</h3>
     </label>
