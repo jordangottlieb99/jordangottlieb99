@@ -39,6 +39,7 @@ function Academic() {
 }
 
 function updateName(transaction, results) {
+	alert(results);
     //initialise the listitems variable
     var name = "";
     //get the car list holder ul
@@ -66,7 +67,6 @@ function Service() {
     if (mydb) {
 		mydb.transaction(function(t) {
 		t.executeSql("SELECT clubname FROM clubsdata", [], updateName);/*, updateName);*/
-		alert(results);
 		/*src.innerHTML = dataimg;*/
 		})
 }	else {
