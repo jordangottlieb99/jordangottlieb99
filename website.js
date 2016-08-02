@@ -42,15 +42,15 @@ function updateName(transaction, results) {
     //initialise the listitems variable
     var name = "";
     //get the car list holder ul
-    var prevname = document.getElementById("pop");
+    var pop = document.getElementById("pop");
     //clear cars list ul
-    prevname.innerHTML = "";
+    pop.innerHTML = "";
     var i;
     //Iterate through the results
     for (i = 0; i < results.rows.length; i++) {
         //Get the current row
         var row = results.rows.name(i);
-        prevname.innerHTML += "<li>" + row.name;
+        prevname.innerHTML += row.name;
     }
 }
 //function to get the list of cars from the database
