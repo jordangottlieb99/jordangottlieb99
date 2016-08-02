@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="clubt.png">
+<link rel="stylesheet" href="home_style.css">
+<link rel="stylesheet" href="userdrop.css">
+<script src="website.js"></script>
+<!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+    <!--<link href='style.css' rel='stylesheet'>-->
+<meta charset="utf-8">
+<meta name="viewport"content="width=device-width, initial-scale=1">
+<!--Lastest verson-->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!--jQuery library-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!--lastest javascript-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+body {
+    font-family: 'Trocchi', bold-sans serif; 
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(230, 230, 230, 0.8);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000073;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    background-color: white;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* CSS code for create a club button*/
+a:link.clubcreatebutton, a:visited.clubcreatebutton {
+    background-color: #000073;
+    color: white;
+    line-height: 250px;
+    font-family: 'Trocchi', bold-sans serif;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 35%;
+    height: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+a:hover.clubcreatebutton, a:active.clubcreatebutton {
+    background-color: #ff8f7e;
+    box-shadow: 10px 10px 5px grey;
+}
+/*end of CSS code for create a club button*/
+
+.hidden{
+    display:none;
+}
+
+.unhidden{
+    display:block;
+}
+</style>
+
+<body >
+<!--SIDE BAR-->
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Username</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">Likes</a>
+    <a href="#notifications">Notifications</a>
+    <a href="#log out">Log Out</a>
+  </div>
+</div>
+
+<div class="topcorner">
+    <a href="home.php"></a></div>
+<header>CLUBIFIED</header>
+<img src="clubt.png" class="pushpic" id="club">
+<!--SIDE BAR-->
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+  <button type="button" onclick="goHome()">Home</button><br>
+  <button type="button" onclick="Academics()">Academic</button><br>
+  <button type="button" onclick="Honor()">Honor Societies</button><br>
+  <button type="button" onclick="Service()">Service</button><br>
+  <button type="button" onclick="Social()">Social Awareness</button><br>
+  <button type="button" onclick="SGA()">Student Government</button><br>
+  <button type="button" onclick="Other()">Other</button><br>
+</div>
+
+<div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="ribbon.png" class="rotate90"></span>
+    
+<!--SIDE BAR DONE-->
+<center><a class="clubcreatebutton" href="CreateAClubForm.html">Create a club</a></center>
+<div class="unhidden" id="homee">
+<h2 id="test"> FEATURES</h2>
+<div id="test2">
+<center>
+    <p>CLUBIFIED allows studnets to 'create aclub' in the sense that they can add a club to the system and showcase it in the website.</p>
+    <p> Students can interact by sharing ideas and give advice through the comments.</p>
+    <p>The Category button will display a side bar providing all the categories and their corresponding web page.</p>
+    <p>Club and organizations will be tagged in order to provide an effiecnt search system.</p>
+    <p>Users are encouraged to tag a club by its category, hosting school, and other key words to provide a more advanced search.</p>
+</center>
+<h3>OUR MISSION</h3>
+<center>
+    <p> CLUBIFIED was created as a platform for students to promote how to make a change in the world through clubs and club activites.</p>
+    <p> Our mission is to inspire students to create impactive clubs in thier schools and communities and encourage thier generation
+    to make a change.</p>
+    <p>CLUBIFIED is for the students, to the students, by the students.</p>
+</center>
+
+<h4>ABOUT US</h4>
+<!--about us-->
+<center>
+<div class="ui link items">
+    <div class="item">
+        <div class="ui tiny image">
+            <img src="">
+        </div>
+        <div class="content">
+            <div class="header"id="name">
+                The Team
+            </div>
+            <p>
+            <div class="description">
+                <p>Team Queen includes Daniela, Grace, Jordan, and Oluoma.</p>
+                <p> Daniela and Oluoma attend Jose Marti MAST 6-12 Academy. Grace attends the School for Advanced Studies
+                and Jordan attends Dr. Michael Krop High School.</p>
+                <p>The girls meet at the Girls Who Code Summer Intermission Program, where Team Queen was formed.</p>
+                <p> As their final project, Team Queen birthed CLUBIFIED, a student interactive website to promotes
+                important causes through clubs and school activities.</p>
+                <p>Their passion to make an impact in the world encouraged them to seek out thier generation for participation.</p>
+                <p>From the streets of Miami, they hope to reach students across the nation.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</center>
+</div> 
+</div>
+</div>
+<!--<style>
+
+.hidden{
+    display:none;
+}
+
+.unhidden{
+    display:block;
+}
+
+</style>-->
+<script>
+
+function category1 (){
+	if (mydb) {
+		mydb.transaction(function(t){
+		var dataimg = t.executeSql("SELECT image FROM clubsdata WHERE categories = 1");
+		var src = document.getElementById("imgg").src
+		src.innerHTML = dataimg
+		}
+	else 
+		alert("db not found!")
+	}	
+}
+
+</script>
+
+<div class="hidden" id="thumbnail">
+<div class="row" id="pop">
+  <div class="col-sm-6 col-md-4" id="pop">
+    <div class="thumbnail" id="pop">
+      <img src="" alt="" id="imgg">
+      <div class="caption"id="pop">
+        <h3 id="pop">Math Club</h3>
+        <p id="pop">...</p>
+        <p><a href="#" id="pop "class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--about us-->
+
+
+
+<!--</div>-->
+<div id= "site-info">
+<div class="pagewidth">
+<small>
+Copyright © 2016 TEAM QUEEN
+</small>
+</div>
+</div>
+</div>
+</body>
+
+
+</html>
