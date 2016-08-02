@@ -50,7 +50,7 @@ function updateName(transaction, results) {
     for (i = 0; i < results.rows.length; i++) {
         //Get the current row
         var row = results.rows.item(i);
-        alert(row.clubname)
+        alert(row)
         pop.innerHTML = row.clubname;
     }
 }
