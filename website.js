@@ -26,13 +26,24 @@ function Academics() {
     var catt1 = ["Academic Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
-	document.getElementById("thumbnail").className= "unhidden"
+	document.getElementById("thumbnail").className= "unhidden";
+	    var dataimg4 = t.executeSql("SELECT image FROM clubsdata WHERE categories = 4");
+    var src4 = document.getElementById("imgg").src;
+    if (mydb) {
+		mydb.transaction(function(t){
+		src4.innerHTML = dataimg4;
+		})
+}	else {
+		alert("db not found!");
+	}	
+}
 	
 }
 function Service() {
     var catt1 = ["Service Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
+    	document.getElementById("thumbnail").className= "unhidden";
     var dataimg = t.executeSql("SELECT image FROM clubsdata WHERE categories = 1");
     var src = document.getElementById("imgg").src;
     if (mydb) {
@@ -47,16 +58,46 @@ function Other() {
     var catt1 = ["Other Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
+        document.getElementById("thumbnail").className= "unhidden";
+    var dataimg7 = t.executeSql("SELECT image FROM clubsdata WHERE categories = 7");
+    var src7 = document.getElementById("imgg").src;
+    if (mydb) {
+		mydb.transaction(function(t){
+		src7.innerHTML = dataimg7;
+		})
+}	else {
+		alert("db not found!");
+	}
 }
 function SGA() {
     var catt1 = ["Student Government Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
+        document.getElementById("thumbnail").className= "unhidden";
+    var dataimg3 = t.executeSql("SELECT image FROM clubsdata WHERE categories = 3");
+    var src3 = document.getElementById("imgg").src;
+    if (mydb) {
+		mydb.transaction(function(t){
+		src3.innerHTML = dataimg3;
+		})
+}	else {
+		alert("db not found!");
+	}
 }
 function Social() {
     var catt1 = ["Social Awareness Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
+        document.getElementById("thumbnail").className= "unhidden";
+    var dataimg6 = t.executeSql("SELECT image FROM clubsdata WHERE categories = 1");
+    var src6 = document.getElementById("imgg").src;
+    if (mydb) {
+		mydb.transaction(function(t){
+		src6.innerHTML = dataimg6;
+		})
+}	else {
+		alert("db not found!");
+	}
 }
 function Honor() {
     var catt1 = ["Honor Societies", ""];
@@ -77,4 +118,14 @@ function Hobby() {
     var catt1 = ["Hobby Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
+        document.getElementById("thumbnail").className= "unhidden";
+    var dataimg5 = t.executeSql("SELECT image FROM clubsdata WHERE categories = 1");
+    var src5 = document.getElementById("imgg").src;
+    if (mydb) {
+		mydb.transaction(function(t){
+		src5.innerHTML = dataimg5;
+		})
+}	else {
+		alert("db not found!");
+	}
 }
