@@ -65,7 +65,7 @@ function Service() {
     /*var src = document.getElementById("imgg").src;*/
     if (mydb) {
 		mydb.transaction(function(t) {
-		t.executeSql("SELECT clubname FROM clubsdata", [], updateName);/*, updateName);*/
+		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 1", [], updateName);/*, updateName);*/
 		/*src.innerHTML = dataimg;*/
 		})
 }	else {
