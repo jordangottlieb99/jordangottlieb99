@@ -39,7 +39,6 @@ function Academic() {
 }
 
 function updateName(transaction, results) {
-	alert(results);
     //initialise the listitems variable
     var name = "";
     //get the car list holder ul
@@ -50,9 +49,9 @@ function updateName(transaction, results) {
     //Iterate through the results
     for (i = 0; i < results.rows.length; i++) {
         //Get the current row
-        var row = results.rows.name(i).value;
-        alert(row)
-        pop.innerHTML = row;
+        var row = results.rows.item(i);
+        alert(row.clubname)
+        pop.innerHTML = row.clubname;
     }
 }
 
