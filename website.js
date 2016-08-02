@@ -33,14 +33,14 @@ function Service() {
     var catt1 = ["Service Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
+    var dataimg = t.executeSql("SELECT image FROM clubsdata WHERE categories = 1");
+    var src = document.getElementById("imgg").src;
     if (mydb) {
 		mydb.transaction(function(t){
-		var dataimg = t.executeSql("SELECT image FROM clubsdata WHERE categories = 1");
-		var src = document.getElementById("imgg").src
-		src.innerHTML = dataimg
+		src.innerHTML = dataimg;
 		})
 	else {
-		alert("db not found!")
+		alert("db not found!");
 	}	
 }
 }
