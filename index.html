@@ -209,7 +209,7 @@ function category1 (){
 		var dataimg = t.executeSql("SELECT image FROM clubsdata WHERE categories = 1");
 		var src = document.getElementById("imgg").src
 		src.innerHTML = dataimg
-		}
+		})
 	else 
 		alert("db not found!")
 	}	
