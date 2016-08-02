@@ -30,7 +30,7 @@ function addUser() {
         if (firstname !== "" && lastname !== "" && email !=="" && password !== "") {
             //Insert the user entered details into the clubs table, note the use of the ? placeholder, these will replaced by the data passed in as an array as the second parameter
             mydb.transaction(function(t) {
-				t.executeSql("INSERT INTO clubsdata (email, firstname, lastname, password) VALUES (?, ?, ?, ?)", [email, firstname, lastname, password]); 
+				t.executeSql("INSERT INTO users (email, firstname, lastname, password) VALUES (?, ?, ?, ?)", [email, firstname, lastname, password]); 
 				//window.open("http://www.w3schools.com");
             });
         } else {
