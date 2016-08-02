@@ -37,7 +37,7 @@ function Academic() {
 		alert("db not found!");
 	}	
 }
-/*
+
 function updateName(transaction, results) {
     //initialise the listitems variable
     var name = "";
@@ -54,26 +54,28 @@ function updateName(transaction, results) {
         pop.innerHTML = row;
     }
 }
-*/
+
 //function to get the list of cars from the database
 
 function Service() {
     var catt1 = ["Service Clubs", ""];
-    document.getElementById("test").innerHTML = catt1[0];
-    document.getElementById("test2").innerHTML = catt1[1];
-    document.getElementById("thumbnail").className= "unhidden";
+    //document.getElementById("test").innerHTML = catt1[0];
+    //document.getElementById("test2").innerHTML = catt1[1];
+    //document.getElementById("thumbnail").className= "unhidden";
     /*var src = document.getElementById("imgg").src;*/
     if (mydb) {
-		mydb.transaction(function(t, results){
-	/*	t.executeSql("SELECT image FROM clubsdata WHERE categories = 1", [], updateImg); */ 
-		var name = t.executeSql("SELECT clubname FROM clubsdata WHERE categories = 1");/*, [], updateName);*/
-		alert(name);
+		mydb.transaction(function(t) {
+		t.executeSql("SELECT clubname FROM clubsdata", [], updateName);/*, updateName);*/
+		alert(results);
 		/*src.innerHTML = dataimg;*/
 		})
 }	else {
 		alert("db not found!");
 	}	
 }
+
+
+
 function Other() {
     var catt1 = ["Other Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
