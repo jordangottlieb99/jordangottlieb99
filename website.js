@@ -38,7 +38,7 @@ function Academics() {
 	}	
 }
 	
-}
+
 function Service() {
     var catt1 = ["Service Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
@@ -120,6 +120,7 @@ function Hobby() {
     document.getElementById("test2").innerHTML = catt1[1];
         document.getElementById("thumbnail").className= "unhidden";
     var dataimg5 = t.executeSql("SELECT image FROM clubsdata WHERE categories = 1");
+    alert(dataimg5)
     var src5 = document.getElementById("imgg").src;
     if (mydb) {
 		mydb.transaction(function(t){
