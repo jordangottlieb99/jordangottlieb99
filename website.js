@@ -39,10 +39,9 @@ function Service() {
 		mydb.transaction(function(t){
 		src.innerHTML = dataimg;
 		})
-	else {
+}	else {
 		alert("db not found!");
 	}	
-}
 }
 function Other() {
     var catt1 = ["Other Clubs", ""];
