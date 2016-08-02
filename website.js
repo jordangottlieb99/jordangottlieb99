@@ -49,8 +49,8 @@ function updateName(transaction, results) {
     //Iterate through the results
     for (i = 0; i < results.rows.length; i++) {
         //Get the current row
-        var row = results.rows.name(i);
-        prevname.innerHTML += row.name;
+        var row = results.rows.name(i).value;
+        pop.innerHTML = row;
     }
 }
 //function to get the list of cars from the database
