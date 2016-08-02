@@ -63,7 +63,7 @@ function Service() {
     /*var src = document.getElementById("imgg").src;*/
     if (mydb) {
 		mydb.transaction(function(t, results){
-		t.executeSql("SELECT image FROM clubsdata WHERE categories = 1", [], updateImg);
+	/*	t.executeSql("SELECT image FROM clubsdata WHERE categories = 1", [], updateImg); */ 
 		t.executeSql("SELECT clubname FROM clubsdata WHERE categories = 1", [], updateName);
 		/*src.innerHTML = dataimg;*/
 		})
