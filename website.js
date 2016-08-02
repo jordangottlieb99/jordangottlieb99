@@ -43,6 +43,7 @@ function Service() {
 		alert("db not found!")
 	}	
 }
+}
 function Other() {
     var catt1 = ["Other Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
