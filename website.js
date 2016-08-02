@@ -62,6 +62,16 @@ function Honor() {
     var catt1 = ["Honor Societies", ""];
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
+    document.getElementById("thumbnail").className= "unhidden"
+    var dataimg2 = t.executeSql("SELECT image FROM clubsdata WHERE categories = 2");
+    var src2 = document.getElementById("imgg").src;
+    if (mydb) {
+		mydb.transaction(function(t){
+		src2.innerHTML = dataimg2;
+		})
+}	else {
+		alert("db not found!");
+	}	
 }
 function Hobby() {
     var catt1 = ["Hobby Clubs", ""];
