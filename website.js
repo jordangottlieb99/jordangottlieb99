@@ -62,10 +62,9 @@ function Service() {
     document.getElementById("thumbnail").className= "unhidden";
     /*var src = document.getElementById("imgg").src;*/
     if (mydb) {
-		mydb.transaction(function(t){
+		mydb.transaction(function(t, results){
 		t.executeSql("SELECT image FROM clubsdata WHERE categories = 1", [], updateImg);
 		t.executeSql("SELECT clubname FROM clubsdata WHERE categories = 1", [], updateName);
-		alert(dataimg);
 		/*src.innerHTML = dataimg;*/
 		})
 }	else {
