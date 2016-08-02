@@ -60,9 +60,9 @@ function updateName(transaction, results) {
 
 function Service() {
     var catt1 = ["Service Clubs", ""];
-    //document.getElementById("test").innerHTML = catt1[0];
-    //document.getElementById("test2").innerHTML = catt1[1];
-    //document.getElementById("thumbnail").className= "unhidden";
+    document.getElementById("test").innerHTML = catt1[0];
+    document.getElementById("test2").innerHTML = catt1[1];
+    document.getElementById("thumbnail").className= "unhidden";
     /*var src = document.getElementById("imgg").src;*/
     if (mydb) {
 		mydb.transaction(function(t) {
