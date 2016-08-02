@@ -43,24 +43,38 @@ function Service() {
     var catt1 = ["Service Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
+    if (mydb) {
+		mydb.transaction(function(t){
+		var dataimg = t.executeSql("SELECT image FROM clubsdata WHERE categories = 1");
+		var src = document.getElementById("imgg").src
+		src.innerHTML = dataimg
+		})
+	else 
+		alert("db not found!")
+	}	
 }
 function Other() {
-    var catt1 = ["Service Clubs", ""];
+    var catt1 = ["Other Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
 }
 function SGA() {
-    var catt1 = ["Service Clubs", ""];
+    var catt1 = ["Student Government Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
 }
 function Social() {
-    var catt1 = ["Service Clubs", ""];
+    var catt1 = ["Social Awareness Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
 }
 function Honor() {
-    var catt1 = ["Service Clubs", ""];
+    var catt1 = ["Honor Societies", ""];
+    document.getElementById("test").innerHTML = catt1[0];
+    document.getElementById("test2").innerHTML = catt1[1];
+}
+function Hobby() {
+    var catt1 = ["Hobby Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
 }
