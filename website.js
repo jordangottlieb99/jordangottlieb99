@@ -11,17 +11,7 @@ if (window.openDatabase) {
     alert("WebSQL is not supported by your browser!"); 
 }
 
-function category1 (){
-	if (mydb) {
-		mydb.transaction(function(t){
-		var dataimg = t.executeSql("SELECT image FROM clubsdata WHERE categories = 1");
-		var src = document.getElementById("imgg").src
-		src.innerHTML = dataimg
-		})
-	else 
-		alert("db not found!")
-	}	
-}
+
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
