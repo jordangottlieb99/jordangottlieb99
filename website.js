@@ -65,6 +65,7 @@ function Academic() {
     if (mydb) {
 		mydb.transaction(function(t) {
 		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 4", [], updateName);
+		t.executeSql("SELECT image FROM clubsdata WHERE category = 4", [], updateImage);
 		/*src.innerHTML = dataimg;*/
 		})
 }	else {
@@ -84,6 +85,7 @@ function Service() {
     if (mydb) {
 		mydb.transaction(function(t) {
 		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 1", [], updateName);
+		t.executeSql("SELECT image FROM clubsdata WHERE category = 1", [], updateImage);
 		/*src.innerHTML = dataimg;*/
 		})
 }	else {
@@ -101,6 +103,7 @@ function Other() {
     if (mydb) {
 		mydb.transaction(function(t) {
 		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 7", [], updateName);
+		t.executeSql("SELECT image FROM clubsdata WHERE category = 7", [], updateImage);
 		/*src.innerHTML = dataimg;*/
 		})
 }	else {
@@ -115,6 +118,7 @@ function SGA() {
      if (mydb) {
 		mydb.transaction(function(t) {
 		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 3", [], updateName);
+		t.executeSql("SELECT image FROM clubsdata WHERE category = 3", [], updateImage);
 		/*src.innerHTML = dataimg;*/
 		})
 }	else {
@@ -129,6 +133,7 @@ function Social() {
     if (mydb) {
 		mydb.transaction(function(t) {
 		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 6", [], updateName);
+		t.executeSql("SELECT image FROM clubsdata WHERE category = 6", [], updateImage);
 		/*src.innerHTML = dataimg;*/
 		})
 }	else {
@@ -143,6 +148,7 @@ function Honor() {
     if (mydb) {
 		mydb.transaction(function(t) {
 		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 2", [], updateName);
+		t.executeSql("SELECT image FROM clubsdata WHERE category = 2", [], updateImage);
 		/*src.innerHTML = dataimg;*/
 		})
 }	else {
