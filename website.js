@@ -65,7 +65,7 @@ function Service() {
     /*var src = document.getElementById("imgg").src;*/
     if (mydb) {
 		mydb.transaction(function(t) {
-		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 1", [], updateName);/*, updateName);*/
+		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 1", [], updateName);
 		/*src.innerHTML = dataimg;*/
 		})
 }	else {
@@ -80,11 +80,10 @@ function Other() {
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
         document.getElementById("thumbnail").className= "unhidden";
-    var dataimg7 = t.executeSql("SELECT image FROM clubsdata WHERE categories = 7");
-    var src7 = document.getElementById("imgg").src;
     if (mydb) {
-		mydb.transaction(function(t){
-		src7.innerHTML = dataimg7;
+		mydb.transaction(function(t) {
+		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 7", [], updateName);
+		/*src.innerHTML = dataimg;*/
 		})
 }	else {
 		alert("db not found!");
@@ -95,11 +94,10 @@ function SGA() {
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
         document.getElementById("thumbnail").className= "unhidden";
-    var dataimg3 = t.executeSql("SELECT image FROM clubsdata WHERE categories = 3");
-    var src3 = document.getElementById("imgg").src;
-    if (mydb) {
-		mydb.transaction(function(t){
-		src3.innerHTML = dataimg3;
+     if (mydb) {
+		mydb.transaction(function(t) {
+		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 3", [], updateName);
+		/*src.innerHTML = dataimg;*/
 		})
 }	else {
 		alert("db not found!");
@@ -110,11 +108,10 @@ function Social() {
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
         document.getElementById("thumbnail").className= "unhidden";
-    var dataimg6 = t.executeSql("SELECT image FROM clubsdata WHERE categories = 1");
-    var src6 = document.getElementById("imgg").src;
     if (mydb) {
-		mydb.transaction(function(t){
-		src6.innerHTML = dataimg6;
+		mydb.transaction(function(t) {
+		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 6", [], updateName);
+		/*src.innerHTML = dataimg;*/
 		})
 }	else {
 		alert("db not found!");
@@ -125,11 +122,10 @@ function Honor() {
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
     document.getElementById("thumbnail").className= "unhidden"
-    var dataimg2 = t.executeSql("SELECT image FROM clubsdata WHERE categories = 2");
-    var src2 = document.getElementById("imgg").src;
     if (mydb) {
-		mydb.transaction(function(t){
-		src2.innerHTML = dataimg2;
+		mydb.transaction(function(t) {
+		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 2", [], updateName);
+		/*src.innerHTML = dataimg;*/
 		})
 }	else {
 		alert("db not found!");
@@ -140,12 +136,10 @@ function Hobby() {
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
         document.getElementById("thumbnail").className= "unhidden";
-    var dataimg5 = t.executeSql("SELECT image FROM clubsdata WHERE categories = 1");
-    alert(dataimg5)
-    var src5 = document.getElementById("imgg").src;
     if (mydb) {
-		mydb.transaction(function(t){
-		src5.innerHTML = dataimg5;
+		mydb.transaction(function(t) {
+		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 5", [], updateName);
+		/*src.innerHTML = dataimg;*/
 		})
 }	else {
 		alert("db not found!");
