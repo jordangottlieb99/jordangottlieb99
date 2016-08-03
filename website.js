@@ -43,11 +43,11 @@ function Academic() {
     document.getElementById("test").innerHTML = catt1[0];
     document.getElementById("test2").innerHTML = catt1[1];
 	document.getElementById("thumbnail").className= "unhidden";
-	    var dataimg4 = t.executeSql("SELECT image FROM clubsdata WHERE categories = 4");
-    var src4 = document.getElementById("imgg").src;
+	 
     if (mydb) {
-		mydb.transaction(function(t){
-		src4.innerHTML = dataimg4;
+		mydb.transaction(function(t) {
+		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 1", [], updateName);
+		/*src.innerHTML = dataimg;*/
 		})
 }	else {
 		alert("db not found!");
