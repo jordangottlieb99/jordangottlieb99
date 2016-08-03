@@ -46,7 +46,7 @@ function Academic() {
 	 
     if (mydb) {
 		mydb.transaction(function(t) {
-		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 1", [], updateName);
+		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 4", [], updateName);
 		/*src.innerHTML = dataimg;*/
 		})
 }	else {
