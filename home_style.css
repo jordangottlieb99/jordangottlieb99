@@ -195,3 +195,12 @@ h4{ font-family:'Trocchi', bold-sans serif;
     display:block;
 }
 
+.thumbstyle{
+    font-family:'Trocchi', bold-sans serif;
+    font-size: 30px; 
+    padding: 0; 
+    color: black;
+    background-color: white;
+    text-align:center;
+}
+
