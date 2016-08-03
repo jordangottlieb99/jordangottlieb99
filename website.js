@@ -38,6 +38,22 @@ function updateName(transaction, results) {
         pop.innerHTML = row.clubname;
     }
 }
+
+function updateImage(transaction, results) {
+    //initialise the listitems variable
+    var name = "";
+    //get the car list holder ul
+    var image = document.getElementById("imgg");
+    //clear cars list ul
+    image.src = "";
+    var i;
+    //Iterate through the results
+    for (i = 0; i < results.rows.length; i++) {
+        //Get the current row
+        var row = results.rows.item(i);
+        image.src = row.image;
+    }
+}
 function Academic() {
     var catt1 = ["Academic Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
@@ -139,6 +155,7 @@ function Hobby() {
     if (mydb) {
 		mydb.transaction(function(t) {
 		t.executeSql("SELECT clubname FROM clubsdata WHERE category = 5", [], updateName);
+		t.executeSql("SELECT image FROM clubsdata WHERE category = 5", [], updateImage);
 		/*src.innerHTML = dataimg;*/
 		})
 }	else {
