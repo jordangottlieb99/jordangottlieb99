@@ -22,6 +22,22 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
 }
+
+function updateName(transaction, results) {
+    //initialise the listitems variable
+    var name = "";
+    //get the car list holder ul
+    var pop = document.getElementById("pop");
+    //clear cars list ul
+    pop.innerHTML = "";
+    var i;
+    //Iterate through the results
+    for (i = 0; i < results.rows.length; i++) {
+        //Get the current row
+        var row = results.rows.item(i);
+        pop.innerHTML = row.clubname;
+    }
+}
 function Academic() {
     var catt1 = ["Academic Clubs", ""];
     document.getElementById("test").innerHTML = catt1[0];
@@ -38,24 +54,8 @@ function Academic() {
 	}	
 }
 
-function updateName(transaction, results) {
-    //initialise the listitems variable
-    var name = "";
-    //get the car list holder ul
-    var pop = document.getElementById("pop");
-    //clear cars list ul
-    pop.innerHTML = "";
-    var i;
-    //Iterate through the results
-    for (i = 0; i < results.rows.length; i++) {
-        //Get the current row
-        var row = results.rows.item(i);
-        alert(row)
-        pop.innerHTML = row.clubname;
-    }
-}
 
-//function to get the list of cars from the database
+
 
 function Service() {
     var catt1 = ["Service Clubs", ""];
