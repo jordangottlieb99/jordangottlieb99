@@ -43,9 +43,9 @@ function updateImage(transaction, results) {
     //initialise the listitems variable
     var name = "";
     //get the car list holder ul
-    var image = document.getElementById("imgg");
+    var imgg = document.getElementById("imgg");
     //clear cars list ul
-    image.src = "";
+    imgg.src = "";
     var i;
     //Iterate through the results
     for (i = 0; i < results.rows.length; i++) {
@@ -53,7 +53,7 @@ function updateImage(transaction, results) {
         var row = results.rows.item(i);
         var source = row.image.substr(12);
         alert(source)
-        image.src = source;
+        imgg.src = source;
     }
 }
 function Academic() {
